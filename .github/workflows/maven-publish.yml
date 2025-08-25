@@ -31,6 +31,6 @@ jobs:
       run: mvn -B package --file pom.xml
 
     - name: Publish to GitHub Packages Apache Maven
-      run: mvn deploy -DaltDeploymentRepository=my-repo::default::https://my.maven.repo/repository/maven-releases/
+      run: mvn clean install
       env:
         GITHUB_TOKEN: ${{ github.token }}
